@@ -9,20 +9,34 @@
                     <header class="card-header">
                        Add Category
                     </header>
+
                     <div class="card-body">
+                        @if($errors->any())
+                            @foreach($errors->all() as $error)
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {{$error}}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            @endforeach
+                        @endif
+
                         <form action="{{route('admin.category_add')}}" method="post">
                             @csrf
                             <div class="form-row align-items-center">
                                 <p>Category Name</p>
                                 <div class="col-auto col-sm-4">
-                                    <input type="text" class="form-control mb-3" name="category_name" placeholder="Category Name">
+                                    <input type="text" class="form-control mb-3" name="category_name" placeholder="Category Name" value="{{old('category_name')}}">
+
                                 </div>
                                 <p>Category Slug</p>
                                 <div class="col-auto col-sm-4">
                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
                                         </div>
-                                        <input type="text" class="form-control" name="slug" placeholder="Category Slug">
+                                        <input type="text" class="form-control" name="slug" placeholder="Category Slug" value="{{old('slug')}}">
+
                                     </div>
                                 </div>
 

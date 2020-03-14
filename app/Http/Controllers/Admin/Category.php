@@ -11,7 +11,12 @@ class Category extends Controller
         return view('admin.category_add');
     }
     public function add_category(Request $request){
-        $validation_rules = [];
-       return $request->all();
+        $validation_rules = [
+            'category_name'=>'required',
+//            |unique:categories,username
+            'slug'=>'required',
+        ];
+        $this->validate($request,$validation_rules);
+        return $request->except('_token');
     }
 }
