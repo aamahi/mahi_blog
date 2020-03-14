@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class home extends Controller
 {
     public function home(){
-//        return view('admin.home');
-        echo"HO";
+        return view('admin.home');
+//        echo"HO";
     }
 
 }

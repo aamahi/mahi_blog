@@ -13,14 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Frontend\Home@home')->name('frontend.home');
 
-
-//admin
-
-//Route::get('admin','Admin/home@home')->name('admin.home');
-//Route::get('/admin',function (){
-//    echo "HO";
-//});
+Route::get('/dashboard','Admin\home@home')->name('admin.home');
