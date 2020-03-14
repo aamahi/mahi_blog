@@ -1,4 +1,4 @@
-<header class="header white-bg">
+<header class="header bg-info">
     <div class="sidebar-toggle-box">
         <i class="fa fa-bars"></i>
     </div>

@@ -11,16 +11,12 @@
 
             <li class="sub-menu">
                 <a href="javascript:;" >
-                    <i class="fa fa-laptop"></i>
-                    <span>Layouts</span>
+                    <i class="fa fa-tasks"></i>
+                    <span>Category</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="boxed_page.html">Boxed Page</a></li>
+                    <li><a  href="{{URL('dashboard/category_add')}}">Add Category</a></li>
                     <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>
-                    <li><a  href="header-color.html">Different Color Top bar</a></li>
-                    <li><a  href="mega_menu.html">Mega Menu</a></li>
-                    <li><a  href="language_switch_bar.html">Language Switch Bar</a></li>
-                    <li><a  href="email_template.html" target="_blank">Email Template</a></li>
                 </ul>
             </li>
         </ul>

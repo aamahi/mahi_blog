@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','Frontend\Home@home')->name('frontend.home');
 
 Route::get('/dashboard','Admin\home@home')->name('admin.home');
+Route::get('/dashboard/category_add','Admin\Category@category_add')->name('admin.category_add');
+Route::post('/dashboard/category_add','Admin\Category@add_category');
