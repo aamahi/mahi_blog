@@ -13,4 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/','Frontend\Home@home')->name('frontend.home');
+
+
+
+
+//Route::get('admin','Admin/home@home')->name('admin.home');
+Route::get('/admn',function (){
+    echo "HO";
+});
+
