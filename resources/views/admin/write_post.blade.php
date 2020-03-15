@@ -8,8 +8,21 @@
                         <header class="card-header head-border text-center">
                            Write Post
                         </header>
-                        <form action="">
+                        <form action="{{route('write_post')}}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="card-body">
+
+                                @if($errors->any())
+                                    @foreach($errors->all() as $error)
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            {{$error}}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    @endforeach
+                                @endif
+
 {{--                                <div class="summernote">Write your post</div>--}}
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-sm-2 control-label">Title</label>

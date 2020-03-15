@@ -31,3 +31,4 @@ Route::post('dashboard/update_category/{id}','Admin\Category@edit_category');
 
 
 Route::get('/dashboard/write_post',"Admin\Post@write_post")->name('write_post');
+Route::post('/dashboard/write_post',"Admin\Post@write_post_p");
