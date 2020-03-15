@@ -8,14 +8,19 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-
-            <li class="sub-menu">
-                <a href="javascript:;" >
+            <li>
+                <a href="{{URL('dashboard/category_add')}}">
                     <i class="fa fa-tasks"></i>
                     <span>Category</span>
                 </a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-user"></i>
+                    <span>Category</span>
+                </a>
                 <ul class="sub">
-                    <li><a  href="{{URL('dashboard/category_add')}}">Add Category</a></li>
+                    <li><a  href="">Add Category</a></li>
                     <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>
                 </ul>
             </li>

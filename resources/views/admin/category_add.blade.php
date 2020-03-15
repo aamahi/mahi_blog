@@ -80,12 +80,15 @@
                                         <td>{{$category->slug}}</td>
                                         <td>
                                             @if(($category->status)!=1)
-                                                <a class="btn btn-sm btn-warning" href="">Deactive</a>
+                                                <a class="btn btn-sm btn-warning" href="{{route('active_category',$category->id)}}">Deactive</a>
                                              @else
-                                                <a class="btn btn-sm btn-success" href="">Active</a>
+                                                <a class="btn btn-sm btn-success" href="{{route('deactive_category',$category->id)}}">Active</a>
                                              @endif
                                         </td>
-                                        <td>{{$category->status}}</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-danger" href="{{route('delete_category',$category->id)}}">Delete</a>
+                                            <a class="btn btn-sm btn-info" href="{{route('update_category',$category->id)}}">Edit</a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                     </tbody>
