@@ -24,7 +24,7 @@
                     <span>Post</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="">All Post</a></li>
+                    <li><a  href="{{route('all_post')}}">All Post</a></li>
                     <li><a  href="{{route('write_post')}}">Write Post</a></li>
                 </ul>
             </li>

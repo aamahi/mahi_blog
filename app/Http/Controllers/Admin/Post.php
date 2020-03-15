@@ -40,4 +40,9 @@ class Post extends Controller
         $write_post = \App\Model\Post::insert($post);
         return redirect()->route('admin.home');
     }
+
+    public function all_post(){
+        $posts = \App\Model\Post::all();
+        return view('admin.all_post',compact('posts'));
+    }
 }
