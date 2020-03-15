@@ -28,3 +28,6 @@ Route::get('dashboard/delete_category/{id}','Admin\Category@delete_category')->n
 
 Route::get('dashboard/update_category/{id}','Admin\Category@update_category')->name('update_category');
 Route::post('dashboard/update_category/{id}','Admin\Category@edit_category');
+
+
+Route::get('/dashboard/write_post',"Admin\Post@write_post")->name('write_post');

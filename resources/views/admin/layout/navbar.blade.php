@@ -8,12 +8,29 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+{{--            Category--}}
             <li>
                 <a href="{{URL('dashboard/category_add')}}">
                     <i class="fa fa-tasks"></i>
                     <span>Category</span>
                 </a>
             </li>
+
+{{--            Post--}}
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>Post</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="">Add Category</a></li>
+                    <li><a  href="{{route('write_post')}}">Write Post</a></li>
+                </ul>
+            </li>
+
+{{--            Example--}}
+
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-user"></i>
