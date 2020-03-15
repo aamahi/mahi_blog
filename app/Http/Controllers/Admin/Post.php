@@ -20,10 +20,24 @@ class Post extends Controller
             'title'.'required'=>"Please give a title"
         ];
         $this->validate($request,$validation_rules);
-        return $request->except('_token');
-        echo "<pre>";
-        return $request->file('photo');
-        echo "</pre>";
+        $photo_name = $request->file('photo');
+        $title = $request->title;
+        $title_explode = explode(' ',$title);
+        $title_end = end($title_explode);
+        $photo_extension = $photo_name->getClientOriginalExtension();
+        $photo= strtolower($title_end.".".$photo_extension);
 
+        if($photo_name->isValid()){
+            $photo_name->storeAs('post',$photo);
+        }
+        $post = [];
+        $post['title']=$request->title;
+        $post['category_id']=$request->category_id;
+        $post['details']=$request->details;
+        $post['details']=$request->details;
+        $post['photo']=$photo;
+
+        $write_post = \App\Model\Post::insert($post);
+        return redirect()->route('admin.home');
     }
 }

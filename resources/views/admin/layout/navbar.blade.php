@@ -24,23 +24,23 @@
                     <span>Post</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="">Add Category</a></li>
+                    <li><a  href="">All Post</a></li>
                     <li><a  href="{{route('write_post')}}">Write Post</a></li>
                 </ul>
             </li>
 
 {{--            Example--}}
 
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-user"></i>
-                    <span>Category</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="">Add Category</a></li>
-                    <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>
-                </ul>
-            </li>
+{{--            <li class="sub-menu">--}}
+{{--                <a href="javascript:;" >--}}
+{{--                    <i class="fa fa-user"></i>--}}
+{{--                    <span>Category</span>--}}
+{{--                </a>--}}
+{{--                <ul class="sub">--}}
+{{--                    <li><a  href="">Add Category</a></li>--}}
+{{--                    <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
         </ul>
         <!-- sidebar menu end-->
     </div>

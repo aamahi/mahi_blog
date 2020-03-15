@@ -27,7 +27,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-sm-2 control-label">Title</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="title" class="form-control" placeholder="Post Title">
+                                        <input type="text" name="title" class="form-control" value="{{old('title')}}" placeholder="Post Title">
                                     </div>
                                 </div>
 
@@ -48,14 +48,14 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-sm-2 control-label">Post Detailse</label>
                                     <div class="col-sm-10">
-                                        <textarea class="summernote" name="details" id="" cols="30" rows="10"></textarea>
+                                        <textarea class="summernote" name="details" id="" cols="30" rows="10">{{old('details')}}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-sm-2 control-label">Photo Image</label>
                                     <div class="col-sm-10">
-                                        <input type="file" name="photo" class="form-control">
+                                        <input type="file" name="photo" value="{{old('photo')}}" class="form-control">
                                     </div>
                                 </div>
 
