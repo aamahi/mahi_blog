@@ -42,7 +42,8 @@ class Post extends Controller
     }
 
     public function all_post(){
+        $category = \App\Model\Category::find(1);
         $posts = \App\Model\Post::all();
-        return view('admin.all_post',compact('posts'));
+        return view('admin.all_post',compact('posts','category'));
     }
 }

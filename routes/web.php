@@ -34,3 +34,7 @@ Route::get('/dashboard/write_post',"Admin\Post@write_post")->name('write_post');
 Route::post('/dashboard/write_post',"Admin\Post@write_post_p");
 
 Route::get('/dashboard/all_post',"Admin\Post@all_post")->name('all_post');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

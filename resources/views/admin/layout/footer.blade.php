@@ -52,7 +52,7 @@
 
 <!--select2-->
 <script type="text/javascript" src="{{asset('admin/assets/select2/js/select2.min.js')}}"></script>
-')}}
+
 <!--summernote-->
 <script src="{{asset('admin/assets/summernote/dist/summernote.min.js')}}"></script>
 

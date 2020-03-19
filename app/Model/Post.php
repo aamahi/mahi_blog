@@ -12,4 +12,9 @@ class Post extends Model
         'details',
         'photo'
     ];
+
+    public function category()
+    {
+        return $this->hasOne('App\Model\Category');
+    }
 }
