@@ -13,7 +13,13 @@
                             </span>
                         </header>
                         <div class="card-body">
-                            
+                            Category name : {{$category->category_name}}
+                            <br>
+{{--                            {{$category->posts}}--}}
+                            @foreach($category->posts as $post)
+                                Post Title : {{$post->title}}
+                                <br>
+                             @endforeach
                         </div>
                     </section>
                 </div>

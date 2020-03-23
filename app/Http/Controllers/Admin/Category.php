@@ -62,6 +62,7 @@ class Category extends Controller
         return redirect()->route('admin.all_category');
     }
     public function show_category($id){
-       return view('admin.show_category');
+        $category = \App\Model\Category::with('posts')->find($id);
+       return view('admin.show_category',compact('category'));
     }
 }
