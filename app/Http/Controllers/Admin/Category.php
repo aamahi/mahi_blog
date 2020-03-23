@@ -61,4 +61,7 @@ class Category extends Controller
         $update_category->save();
         return redirect()->route('admin.all_category');
     }
+    public function show_category($id){
+       return view('admin.show_category');
+    }
 }

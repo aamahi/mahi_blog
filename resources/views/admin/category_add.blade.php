@@ -88,6 +88,7 @@
                                         <td>
                                             <a class="btn btn-sm btn-danger" href="{{route('delete_category',$category->id)}}">Delete</a>
                                             <a class="btn btn-sm btn-info" href="{{route('update_category',$category->id)}}">Edit</a>
+                                            <a class="btn btn-sm btn-success" href="{{route('show_category',$category->id)}}">Show</a>
                                         </td>
                                     </tr>
                                     @endforeach

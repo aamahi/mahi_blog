@@ -40,7 +40,7 @@
                                         <tr>
                                             <td><img width="85"  src="{{asset('admin/post/'.$post->photo)}}" alt=""></td>
                                             <td>{{$post->title}} </td>
-                                            <td>{{$post->category_id}} </td>
+                                            <td>{{$post->category->category_name}} </td>
                                             <td>{{date('jS M , Y',strtotime($post->created_at))}} </td>
                                             <td>
                                                 <a href="" class="btn btn-md btn-info"> <i class="fa fa-eye"></i> </a>

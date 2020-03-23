@@ -38,12 +38,11 @@ class Post extends Controller
         $post['photo']=$photo;
 
         $write_post = \App\Model\Post::insert($post);
-        return redirect()->route('admin.home');
+        return redirect()->route('all_post');
     }
 
     public function all_post(){
-        $category = \App\Model\Category::find(1);
-        $posts = \App\Model\Post::all();
-        return view('admin.all_post',compact('posts','category'));
+        $posts = \App\Model\Post::select('id','title','category_id','created_at','photo')->with('category')->get();
+        return view('admin.all_post',compact('posts'));
     }
 }

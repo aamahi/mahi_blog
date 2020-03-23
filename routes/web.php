@@ -27,6 +27,7 @@ Route::get('dashboard/deactive_category/{id}','Admin\Category@deactive_category'
 Route::get('dashboard/delete_category/{id}','Admin\Category@delete_category')->name('delete_category');
 
 Route::get('dashboard/update_category/{id}','Admin\Category@update_category')->name('update_category');
+Route::get('dashboard/show_category/{id}','Admin\Category@show_category')->name('show_category');
 Route::post('dashboard/update_category/{id}','Admin\Category@edit_category');
 
 
